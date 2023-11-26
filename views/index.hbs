@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .signup-container {
+            margin-top: 50px;
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .green-ambiance {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 4px;
+        }
+
+        .btn-signup {
+            background-color: #218838;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .otp-container {
+            margin-top: 20px;
+            border-top: 1px solid #dee2e6;
+            padding-top: 20px;
+        }
+
+        .btn-verify {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .random-values {
+            color: #6c757d;
+        }
+
+        .poster {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="signup-container">
+            <div class="green-ambiance">
+                <h2>Sign Up</h2>
+            </div>
+
+            <!-- Poster Placeholder -->
+            <img src="images/ok.jpg" alt="Poster" class="poster">
+
+            <!-- Side-by-Side Layout -->
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Form -->
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bloodGroup">Blood Group</label>
+                            <select class="form-control" id="bloodGroup">
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="panchayath">Panchayath</label>
+                            <select class="form-control" id="panchayath">
+                                <option value="Panchayath 1">Panchayath 1</option>
+                                <option value="Panchayath 2">Panchayath 2</option>
+                                <option value="Panchayath 3">Panchayath 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="unit">Unit</label>
+                            <select class="form-control" id="unit">
+                                <option value="Unit 1">Unit 1</option>
+                                <option value="Unit 2">Unit 2</option>
+                                <option value="Unit 3">Unit 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="designation">Designation</label>
+                            <select class="form-control" id="designation">
+                                <option value="Manager">Manager</option>
+                                <option value="Supervisor">Supervisor</option>
+                                <option value="Employee">Employee</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-signup">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <!-- OTP Verification -->
+                    <div class="otp-container">
+                        <h4>OTP Verification</h4>
+                        <p>An OTP will be sent to your phone for verification.</p>
+
+                        <div class="form-group">
+                            <label for="otp">Enter OTP</label>
+                            <input type="text" class="form-control" id="otp" placeholder="Enter OTP">
+                        </div>
+
+                        <button type="button" class="btn btn-verify">Verify OTP</button>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</div>
+
+<script>
+    // Generate random values for selection types
+    document.getElementById('randomBloodGroup').innerText = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'][Math.floor(Math.random() * 8)];
+    document.getElementById('randomPanchayath').innerText = ['Panchayath 1', 'Panchayath 2', 'Panchayath 3'][Math.floor(Math.random() * 3)];
+    document.getElementById('randomUnit').innerText = ['Unit 1', 'Unit 2', 'Unit 3'][Math.floor(Math.random() * 3)];
+    document.getElementById('randomDesignation').innerText = ['Manager', 'Supervisor', 'Employee'][Math.floor(Math.random() * 3)];
+</script>
+
+</body>
+</html>
