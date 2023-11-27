@@ -104,13 +104,13 @@
         crossorigin="anonymous"></script>
     <script>
         const firebaseConfig = {
-            apiKey: "AIzaSyCdTpZtzz_0IwCjOkArGw7-vHDD0gB4yr0",
-            authDomain: "cms-400906.firebaseapp.com",
-            projectId: "cms-400906",
-            storageBucket: "cms-400906.appspot.com",
-            messagingSenderId: "1093275061453",
-            appId: "1:1093275061453:web:aa858968f5847a227eed84",
-            measurementId: "G-YXT2S1PKV2"
+            apiKey: "AIzaSyD2ghfC4Z7U-qcNfDKvIMqcjZB797cJQNA",
+            authDomain: "tesing-cms.firebaseapp.com",
+            projectId: "tesing-cms",
+            storageBucket: "tesing-cms.appspot.com",
+            messagingSenderId: "521068715805",
+            appId: "1:521068715805:web:4c31d070c3f37d91fb0bf4",
+            measurementId: "G-D0QLTD3C8R"
         };
         firebase.initializeApp(firebaseConfig);
 
@@ -174,7 +174,7 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    if(data.message) {
+                    if (data.message) {
                         window.location.href = '/dashboard'
                     }
                 })
